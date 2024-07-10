@@ -34,8 +34,8 @@ export default {
         gap: 6%;
         background-color: #232548;
         height: 90px;
-        border-radius: 40px;
-        margin: 0 20px 0 20px;
+        border-radius: 33px;
+        margin: 30px 20px 0 20px;
 }
 
 .text {
