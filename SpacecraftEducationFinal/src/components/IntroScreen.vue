@@ -49,4 +49,19 @@ img {
         max-width: 400px; /* maybe variable erstellen*/
         border-radius: 20px;
 }
+
+/* ---------------------------Animation--------------------------- */
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  animation: fadeInLeft 2s ease-in-out forwards;
+}
 </style>

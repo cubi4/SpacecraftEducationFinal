@@ -3,8 +3,7 @@
   <div class="NavGap">
     <NavBar />
   </div>
-  
-  <IntroScreen />
+  <IntroScreen />  
 </div>
   
 
