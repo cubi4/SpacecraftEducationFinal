@@ -1,0 +1,18 @@
+:root {
+  --background-color-primary: rgba(7, 1, 38, 1);
+  --background-color-secondary: rgba(35, 37, 72, 1);
+  --font-style-normal: 'Outfit';
+  --font-size-normal: 20px;
+  --font-size-head: 48px;
+  --font-weight-normal: 300;
+  --font-color-normal: white;
+  --container-height: 500px; 
+  background-color: var(--background-color-primary);
+}
+
+
+/* @font-face {
+  font-family: "Outfit";
+  src: url('/fonts/Outfit/Outfit-Regular.woff2') format("woff2"),
+        url('/fonts/Outfit/Outfit-Regular.woff') format("woff"),
+} */
