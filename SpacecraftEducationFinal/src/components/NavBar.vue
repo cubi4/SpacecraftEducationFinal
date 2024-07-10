@@ -1,4 +1,5 @@
 <template>
+
         <div class="wrapper">
                 <div class="icon item-1">
                         <img src="\Logo_Inverted.svg">
@@ -16,33 +17,47 @@
                         Ein Stück Weltraum in deinen Händen
                 </div>
         </div>
+
 </template>
 
 <script>
 export default {
-        data() {
-        }
+        name: "NavBar",
 }
 </script>
 
 <style scoped>
 .wrapper {
-        /* position: relative; */
+        /* Center and fix NavBar at top */
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* for center Navbar after certain width*/
+        /* for center Navbar after certain width*/
+        right: 0;
+        z-index: 1000;
+        /* Give Navbar right Properties */
         display: flex;
         align-items: center;
         justify-content: start;
         gap: 6%;
-        background-color: #232548;
-        height: 90px;
-        border-radius: 33px;
+        background-color: rgba(35, 37, 72, 0.8);
+        height: 70px;
+        border-radius: 30px;
         margin: 30px 20px 0 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
 }
 
 .text {
         position: relative;
         color: white;
-        font-size: 20px;
+        font-size: var(--font-size-normal);
         margin: 0 5px;
+}
+
+.rightsideText {
+        font-size: 20px;
 }
 
 .rightsideText {
@@ -53,13 +68,13 @@ export default {
 }
 
 img {
-        width: 190px;
-        margin: 0 20px;
+        width: 150px;
+        margin: 0 25px;
 }
 
+/* -----------------------------Hover effects----------------------------- */
 
-
-.button{
+.button {
         position: relative;
 }
 
@@ -72,15 +87,19 @@ img {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -6px; /*distance underlin to text*/
-        height: 2px; /* thickness underline */
+        bottom: -8px;
+        /*distance underline to text*/
+        height: 3px;
+        /* thickness underline */
+        border-radius: 2px;
         background-color: #96b9d3;
         transition: width 0.3s ease;
 }
 
 .button:hover::after {
-  width: 70%; /* length of line */
-  left: 15%; /* left= 100-width/2 */
+        width: 60%;
+        /* length of line */
+        left: 20%;
+        /* left= 100-width/2 */
 }
-
 </style>
