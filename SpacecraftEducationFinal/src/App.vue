@@ -1,12 +1,15 @@
-<script setup>
-// import 
-</script>
-
 <template>
   <div>
-    Hello Final Project
   </div>
+  <NavBar />
 </template>
 
-<style scoped>
-</style>
+
+
+<script setup>
+import NavBar from './components/NavBar.vue';
+
+
+</script>
+
+<style scoped></style>
