@@ -10,9 +10,11 @@
 
       background-color: var(--background-color-primary);
       color: var(--font-color-normal);
-      --max-width-page: 2000px;
+      --max-width-page: 4000px;
       --min-width-photo: 200px;
       --max-width-photo: 400px;
+
+      --border-radius-photo: 20px;
 }
 
 /* @font-face {
