@@ -9,12 +9,12 @@
 <script>
 export default {
         name: 'Angebot',
-        // Your component's JavaScript logic goes here
+        
 }
 </script>
 
 <style scoped>
-/* Your component's CSS styles go here */
+
 button {
         background-color: #4CAF50;
         /* Green */
