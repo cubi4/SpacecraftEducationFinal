@@ -14,10 +14,9 @@ export default {
 </script>
 
 <style scoped>
-        .background {
-                width: 100%;
-                min-height: var(--min-height-segment);
-                background-color: var(--background-color-secondary);
-        }
-
+.background {
+        width: 100%;
+        min-height: var(--min-height-segment);
+        background-color: var(--background-color-secondary);
+}
 </style>

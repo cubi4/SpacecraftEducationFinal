@@ -6,8 +6,8 @@
     <InteraktivesLernen class="InteraktivesLernen" />
     <Angebot />
     <Kontakt />
-    
-    
+
+
   </div>
 </template>
 
@@ -31,20 +31,15 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .app-container {
   overflow-x: hidden;
   width: 100%;
-/*
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: var(--max-width-page);*/
-  /* Set your desired max-width of page */
-  /* Ensure the container takes full width up to max-width */
-  /* Center the container */
 }
 
 .NavGap {
