@@ -1,21 +1,33 @@
 <template>
         <div class="background">
                 <h1>INTERAKTIVES LERNEN</h1>
-                <div class="flexbox flexbox-1">
-                        <p class="text">
-                                Der Satellitenbaukasten bietet eine einzigartige
-                                Möglichkeit, die Form und Funktion von
-                                Satelliten durch hands-on Erfahrung zu erlernen.
-                                Jedes Modell enthält Bauteile, die vereinfacht
-                                realen Satellitenkomponenten entsprechen.
-                        </p>
-                        <img src="../assets/Beispiel_Bild.png"
-                                alt="BeispielLukas" />
+                <div class="outer-flexbox">
+                        <div class="column inner-flexbox-left">
+                                <p class="text item item-1">
+                                        Der Satellitenbaukasten bietet eine
+                                        einzigartige
+                                        Möglichkeit, die Form und Funktion von
+                                        Satelliten durch hands-on Erfahrung zu
+                                        erlernen.
+                                        Jedes Modell enthält Bauteile, die
+                                        vereinfacht
+                                        realen Satellitenkomponenten
+                                        entsprechen.
+                                </p>
+
+                                <img class="item item-2"
+                                        src="../assets/Beispiel_Bild.png"
+                                        alt="BeispielLukas" />
+                        </div>
+
+
+                        <div class="column inner-flexbox-right">
+                                <img class="item item-3"
+                                        src="../assets/Satellit_Explo_alpha.png"
+                                        alt="SatellitExplosion" />
+                        </div>
+
                 </div>
-                <img src="../assets/Beispiel_Bild.png" alt="BeispielLukas" />
-                <img src="../assets/Satellit_Explo_alpha.png"
-                        alt="SatellitExplosion" />
-                <img src="../assets/Beispiel_Bild.png" alt="BeispielLukas" />
         </div>
 </template>
 
@@ -26,17 +38,43 @@ export default {
 </script>
 
 <style scoped>
-.flexbox {
+h1 {
+        font-size: var(--font-size-head);
+        margin: 10px;
+}
+
+.background {
+        min-height: var(--min-height-segment);
+}
+
+.outer-flexbox {
         display: flex;
         justify-content: center;
-        align-items: center;
-        gap: 4%;
-        margin: 10px;
         width: 100%;
+        gap: 12%;
+        margin: 10px;
 
 }
 
+.inner-flexbox-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
 
+.inner-flexbox-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+
+/* .item{
+        flex-basis: 50%;
+        box-sizing: border-box;
+} */
 /* Macht text Sinn hier? */
 .text {
         font-size: var(--font-size-normal);
@@ -45,7 +83,7 @@ export default {
 }
 
 img {
-        width: 30%;
+        width: 80%;
         min-width: 200px;
         /* maybe variable erstellen*/
         max-width: 600px;

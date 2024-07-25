@@ -13,7 +13,7 @@
       --max-width-page: 4000px;
       --min-width-photo: 200px;
       --max-width-photo: 400px;
-
+      --min-height-segment: 600px;
       --border-radius-photo: 20px;
 }
 
