@@ -1,11 +1,12 @@
 <template>
   <div class="app-container NavGap">
     <NavBar />
-    <IntroScreen />
+    <IntroScreen class="background-Intro" />
 
     <InteraktivesLernen class="InteraktivesLernen" />
-    <Angebot />
-    <Kontakt />
+    <Angebot class="Angebot" />
+    
+    <Kontakt class="Kontakt"/>
 
 
   </div>
@@ -19,6 +20,7 @@ import Angebot from "./components/Angebot.vue";
 import Kontakt from "./components/Kontakt.vue";
 
 
+
 export default {
   name: "App",
   components: {
@@ -27,6 +29,7 @@ export default {
     InteraktivesLernen,
     Angebot,
     Kontakt,
+    
   },
 };
 </script>
@@ -35,6 +38,11 @@ export default {
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--font-style-normal);
+}
+
+.background-Intro {
+  background-color: green;
 }
 
 .app-container {
@@ -50,4 +58,6 @@ body {
 .InteraktivesLernen {
   background-color: var(--background-color-secondary);
 }
+
+
 </style>

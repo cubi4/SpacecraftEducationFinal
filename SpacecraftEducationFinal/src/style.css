@@ -5,6 +5,7 @@
       --font-size-normal: 20px;
       --font-size-head: 48px;
       --font-weight-normal: 300;
+      --font-weight-bold: 500;
       --font-color-normal: white;
       --container-height: 500px;
 
@@ -17,8 +18,8 @@
       --border-radius-photo: 20px;
 }
 
-/* @font-face {
+@font-face {
   font-family: "Outfit";
   src: url('/fonts/Outfit/Outfit-Regular.woff2') format("woff2"),
-        url('/fonts/Outfit/Outfit-Regular.woff') format("woff"),
-} */
+        /* url('/fonts/Outfit/Outfit-Regular.woff') format("woff"), */
+}
