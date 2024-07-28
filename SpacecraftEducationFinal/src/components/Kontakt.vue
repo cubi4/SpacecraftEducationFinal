@@ -65,6 +65,7 @@ h1 {
         flex-direction: column;
         align-items: center;
         gap: 30px;
+        margin-bottom: 50px;
 }
 
 button {
