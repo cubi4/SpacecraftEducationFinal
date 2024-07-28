@@ -62,6 +62,11 @@ export default {
         background-color: var(--background-color-primary);
 }
 
+h1{
+        font-size: var(--font-size-head);
+}
+
+
 .flexbox {
         display: flex;
         justify-content: center;

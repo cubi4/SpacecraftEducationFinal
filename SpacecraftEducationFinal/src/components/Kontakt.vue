@@ -41,13 +41,17 @@ export default {
 <style scoped>
 .background {
         background-image: url("../assets/Kontakt_Photo.png");
-        /* TODO Anpassen an andere ScreenGrößen */
-        /* background-size: 100%; */
         background-size: cover;
         background-repeat: no-repeat;
-        min-height: var(--min-height-segment);
-        height: 900px;
-        /* wei0 nicht genau*/
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+}
+
+h1 {
+        font-size: var(--font-size-head);
+        padding-top: 30px;
 }
 
 .text {
@@ -90,11 +94,6 @@ button:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-
-        /* For Animation */
-        overflow: hidden;
-
-
 }
 
 
@@ -103,6 +102,7 @@ button:hover {
 .banner {
         white-space: nowrap;
         position: relative;
+        overflow: hidden;
 }
 
 span {

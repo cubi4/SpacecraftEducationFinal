@@ -1,20 +1,22 @@
 <template>
+        <div class="wrapwrapper">
 
-        <div class="wrapper">
-                <div class="icon item-1">
-                        <img src="\Logo_Inverted.svg">
-                </div>
-                <div class="text button item-2">
-                        Was machen wir?
-                </div>
-                <div class="text button item-3">
-                        Unsere Produkte
-                </div>
-                <div class="text button item-4">
-                        Unser Kontakt
-                </div>
-                <div class="text item-5 rightsideText">
-                        Ein Stück Weltraum in deinen Händen
+                <div class="wrapper">
+                        <div class="icon item-1">
+                                <img src="\Logo_Inverted.svg">
+                        </div>
+                        <div class="text button item-2">
+                                Was machen wir?
+                        </div>
+                        <div class="text button item-3">
+                                Unsere Produkte
+                        </div>
+                        <div class="text button item-4">
+                                Unser Kontakt
+                        </div>
+                        <div class="text item-5 rightsideText">
+                                Ein Stück Weltraum in deinen Händen
+                        </div>
                 </div>
         </div>
 
@@ -27,16 +29,26 @@ export default {
 </script>
 
 <style scoped>
+.wrapwrapper {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        /* max-width: var(--max-width-page); */
+        max-width: 2000px;
+        /* height: 50px; */
+}
+
 .wrapper {
         /* Center and fix NavBar at top */
         position: fixed;
-        top: 0;
-        left: 0;
-        /* for center Navbar after certain width*/
-        /* for center Navbar after certain width*/
-        right: 0;
+        width: 95%;
+        max-width: var(--max-width-page);
         z-index: 1000;
-        /* Give Navbar right Properties */
+
+
+
         display: flex;
         align-items: center;
         justify-content: start;

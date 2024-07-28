@@ -11,7 +11,7 @@
       --basic-text-shadow: 1px 1px 2px black;
       background-color: var(--background-color-primary);
       color: var(--font-color-normal);
-      --max-width-page: 4000px;
+      --max-width-page: 2000px;
       --min-width-photo: 200px;
       --max-width-photo: 400px;
       --min-height-segment: 600px;

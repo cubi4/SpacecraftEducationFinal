@@ -1,41 +1,42 @@
 <template>
         <div class="background">
-
-                <h1>EIN STÜCK WELTRAUM IN DEINEN HÄNDEN</h1>
-                <div class="flexbox flexbox-1">
-                        <img src="../assets/Intro_Mädchen_Bau.png"
-                                alt="Schülerin baut Satellit" />
-                        <p class="text text-1">
-                                Willkommen in der faszinierenden Welt
-                                der
-                                Raumfahrt mit
-                                unserem Satellitenbaukasten! Unser
-                                innovatives
-                                Produkt ermöglicht es spielend zu
-                                lernen, was
-                                Satelliten
-                                sind, wie sie aufgebaut sind, und welche
-                                Aufgaben sie im
-                                Weltraum übernehmen.
-                        </p>
-                        <img src="../assets/Intro_SatellitenBauKasten.png"
-                                alt="Hilfe beim Satelliten bauen" />
-                </div>
-                <div class="flexbox flexbox-2">
-                        <img src="../assets/Intro_Stefan_Bau.png"
-                                alt="Zwei Satellit-Baukasten" />
-                        <p class="text text-2">
-                                Der Satellitenbaukasten besteht aus
-                                3D-gedruckten
-                                Satellitenmodellen in Originalgröße, die
-                                aus
-                                verschiedenen Satellitenkomponenten
-                                bestehen und
-                                selbstständig zusammengebaut werden
-                                können.
-                        </p>
-                        <img src="../assets/Intro_Junge_Bau.png"
-                                alt="Schüler baut Satelliten" />
+                <div class="wrapper">
+                        <h1>EIN STÜCK WELTRAUM IN DEINEN HÄNDEN</h1>
+                        <div class="flexbox flexbox-1">
+                                <img src="../assets/Intro_Mädchen_Bau.png"
+                                        alt="Schülerin baut Satellit" />
+                                <p class="text text-1">
+                                        Willkommen in der faszinierenden Welt
+                                        der
+                                        Raumfahrt mit
+                                        unserem Satellitenbaukasten! Unser
+                                        innovatives
+                                        Produkt ermöglicht es spielend zu
+                                        lernen, was
+                                        Satelliten
+                                        sind, wie sie aufgebaut sind, und welche
+                                        Aufgaben sie im
+                                        Weltraum übernehmen.
+                                </p>
+                                <img src="../assets/Intro_SatellitenBauKasten.png"
+                                        alt="Hilfe beim Satelliten bauen" />
+                        </div>
+                        <div class="flexbox flexbox-2">
+                                <img src="../assets/Intro_Stefan_Bau.png"
+                                        alt="Zwei Satellit-Baukasten" />
+                                <p class="text text-2">
+                                        Der Satellitenbaukasten besteht aus
+                                        3D-gedruckten
+                                        Satellitenmodellen in Originalgröße, die
+                                        aus
+                                        verschiedenen Satellitenkomponenten
+                                        bestehen und
+                                        selbstständig zusammengebaut werden
+                                        können.
+                                </p>
+                                <img src="../assets/Intro_Junge_Bau.png"
+                                        alt="Schüler baut Satelliten" />
+                        </div>
                 </div>
         </div>
 </template>
@@ -58,6 +59,12 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+}
+
+.wrapper {
+        border: 1px solid rgb(243, 9, 9);
+        width: 100%;
+        max-width: var(--max-width-page);
 }
 
 h1 {

@@ -1,5 +1,7 @@
 <template>
+
   <NavBar />
+
   <IntroScreen class="IntroScreen" />
 
   <InteraktivesLernen class="InteraktivesLernen" />
@@ -50,6 +52,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 
 .IntroScreen {
   margin: 0px;
