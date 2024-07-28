@@ -1,21 +1,32 @@
 <template>
         <div class="background">
-                <div class="background-image"></div>
-                <div class="content ">
+                <h1>KONTAKT</h1>
+                <p class="text">
+                        SIE KÖNNEN UNS ZU ALLEN THEMEN KONTAKTIEREN!</p>
+                <li>
+                        <ul class="text">FRAGEN ZU DEM PRODUKT</ul>
+                </li>
+                <li>
+                        <ul class="text">MIET- UND KAUFOPTIONEN</ul>
+                </li>
 
-                        <h1>KONTAKT</h1>
-                        SIE KÖNNEN UNS ZU ALLEN THEMEN KONTAKTIEREN!
-                        <li>
-                                FRAGEN ZU DEM PRODUKT
-                        </li>
-                        <li>
-                                MIET- UND KAUFOPTIONEN
-                        </li>
+                <li>
+                        <ul class="text">PERSONLAISIERUNGEN</ul>
+                </li>
+                <p class="text"> ZÖGERN SIE NICHT, UNS MIT IHREN FRAGEN ZU
+                        LÖCHERN.
+                        KONTAKTINFORMATIONEN: info@spacecraft-education.com</p>
 
-                        <li>PERSONLAISIERUNGEN</li>
-                        ZÖGERNS SIE NICHT, UNS MIT IHREN FRAGEN ZU LÖCHERN.
-                        KONTAKTINFORMATIONEN: info@spacecraft-education.com<br>
+                <div class="content">
                         <button>READ MORE ABOUT US </button>
+                        <div class="banner">
+                                <span class="item1">HIER LAUFEN DANN
+                                        EMPFEHLUNGEN UND
+                                        SO
+                                        DURCH</span>
+                                <span class="item2">UND HIER IST EIN ANDERER
+                                        TEXT</span>
+                        </div>
                 </div>
         </div>
 </template>
@@ -28,31 +39,31 @@ export default {
 </script>
 
 <style scoped>
-.background-image {
-        height: 100%;
-        background-image: url("../assets/Kontakt_Photo2.png");
-        background-size: 100% 100%;   /* TODO Anpassen an andere ScreenGrößen */
-        background-repeat: no-repeat;
-        filter: blur(8px);
-}
-
 .background {
-        position: relative;
+        background-image: url("../assets/Kontakt_Photo.png");
+        /* TODO Anpassen an andere ScreenGrößen */
+        /* background-size: 100%; */
+        background-size: cover;
+        background-repeat: no-repeat;
         min-height: var(--min-height-segment);
         height: 900px;
-        /* width: 100%; */
+        /* wei0 nicht genau*/
+}
+
+.text {
+        font-size: var(--font-size-normal);
+        text-shadow: 1px 1px 2px black;
 }
 
 .content {
-        position: absolute;
-        top: 5%;
-        left: 10%;
+        margin-top: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
 }
 
 button {
-        position: relative;
-        top: 50%;
-        left: 50%;
         border: none;
         color: white;
         font-weight: var(--font-weight-bold);
@@ -67,5 +78,52 @@ button:hover {
         color: black;
         cursor: pointer;
 
+}
+
+.banner {
+        background-color: var(--background-color-primary);
+        font-size: var(--font-size-normal);
+        width: 40%;
+        min-height: 80px;
+        border-radius: 20px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* For Animation */
+        overflow: hidden;
+
+
+}
+
+
+/* -------------------------------Animation------------------------------- */
+
+.banner {
+        white-space: nowrap;
+        position: relative;
+}
+
+span {
+        animation: runText 6s linear infinite;
+        position: absolute;
+        left: 100%;
+}
+
+.item1 {
+        animation-delay: 0s;
+}
+
+.item2 {
+        animation-delay: 3.5s;
+}
+
+
+
+@keyframes runText {
+        to {
+                left: -100%;
+        }
 }
 </style>

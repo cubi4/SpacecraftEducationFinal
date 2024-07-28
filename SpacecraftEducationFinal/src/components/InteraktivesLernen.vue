@@ -16,7 +16,7 @@
                                 </p>
 
                                 <img class="item item-2"
-                                        src="../assets/Beispiel_Bild.png"
+                                        src="../assets/Interaktives_Lernen_Personen_Bau.png"
                                         alt="BeispielLukas" />
                         </div>
 
@@ -40,11 +40,12 @@ export default {
 <style scoped>
 h1 {
         font-size: var(--font-size-head);
-        margin: 10px;
+        margin: 0px;
 }
 
 .background {
-        min-height: var(--min-height-segment);
+        padding-top: 30px;
+      min-height: var(--min-height-segment);
 }
 
 .outer-flexbox {

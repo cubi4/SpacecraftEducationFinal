@@ -1,15 +1,13 @@
 <template>
-  <div class="app-container NavGap">
-    <NavBar />
-    <IntroScreen class="background-Intro" />
+  <NavBar />
+  <IntroScreen class="IntroScreen" />
 
-    <InteraktivesLernen class="InteraktivesLernen" />
-    <Angebot class="Angebot" />
-    
-    <Kontakt class="Kontakt"/>
+  <InteraktivesLernen class="InteraktivesLernen" />
+  <Angebot class="Angebot" />
+
+  <Kontakt class="Kontakt" />
 
 
-  </div>
 </template>
 
 <script>
@@ -29,35 +27,35 @@ export default {
     InteraktivesLernen,
     Angebot,
     Kontakt,
-    
+
   },
 };
 </script>
 
 <style>
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   font-family: var(--font-style-normal);
+  overflow-x: hidden;
 }
 
-.background-Intro {
+/* .background-Intro {
   background-color: green;
-}
+} */
 
 .app-container {
   overflow-x: hidden;
   width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.NavGap {
-  margin-top: 170px;
-
+.IntroScreen {
+  margin: 0px;
 }
 
 .InteraktivesLernen {
   background-color: var(--background-color-secondary);
 }
-
-
 </style>
