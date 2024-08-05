@@ -1,7 +1,9 @@
 <template>
       <div class="background">
-            <h1>INTERAKTIVES LERNEN</h1>
+            
             <div class="wrapper">
+                  
+                  <h1>INTERAKTIVES LERNEN</h1>
                   <div class="outer-flexbox">
                         <div class="column inner-flexbox-left">
                               <p class="text item item-1">
@@ -54,7 +56,7 @@ h1 {
 }
 
 .wrapper {
-      border: 1px solid rgb(21, 255, 0);
+      border: 1px solid rgb(62, 255, 23);
       max-width: var(--max-width-page);
       width: 100%;
 }
@@ -66,7 +68,7 @@ h1 {
       width: 100%;
       gap: 3%;
       padding-bottom: max(3%, 50px);
-      padding-left: 3%;
+      /* padding-left: 3%; */
 }
 
 .inner-flexbox-left {
