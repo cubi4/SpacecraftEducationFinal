@@ -60,7 +60,7 @@ export default {
 }
 
 .wrapper {
-      border: 1px solid rgb(243, 9, 9);
+      /* border: 1px solid rgb(243, 9, 9); */
       width: 100%;
       max-width: var(--max-width-page);
 }
@@ -72,7 +72,7 @@ h1 {
 }
 
 .flexbox {
-      border: 1px solid rgb(61, 177, 255);
+      /* border: 1px solid rgb(61, 177, 255); */
 
       display: flex;
       justify-content: center;
@@ -94,7 +94,7 @@ h1 {
       font-weight: var(--font-weight-normal);
       max-width: 600px;
       text-align: justify;
-      text-shadow: 1px 1px 2px black;
+      text-shadow: 2px 2px 3px black;
       /* maybe variable erstellen*/
 }
 

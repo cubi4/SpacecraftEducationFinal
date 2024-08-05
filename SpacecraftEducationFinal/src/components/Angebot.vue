@@ -4,29 +4,25 @@
                 <div class="flexbox">
                      
                               <div class="button flexbox-item-1"
-                                    v-show="!isHovered"
-                                    @mouseover="hoverButton"
+                                    v-show="!isHovered1"
+                                    @mouseover="hoverButton1"
                                     >
-                                    
-
-                                          <img
+                                    <img
                                                       src="../assets/Icon_shopping.png"></img><br>
                                           MIET- ODER KAUFOPTION
                                           DER<br>
                                           SATELLITENBAU-SETS
-                                  
                               </div>
                         
                        
                               <div class="button button-2"
-                                    v-show="isHovered"
-                                    @mouseleave="leaveButton"
+                                    v-show="isHovered1"
+                                    @mouseleave="hoverButton1"
                                     >
-
                                     <div  class="littleHeader">
-                                    <img id="littleShoppingBag"  src="../assets/Icon_shopping.png"> </img>
-                                    <p id="littleShoppingBagText"> MIET- ODER KAUFOPTION DER SATELLITENBAU-SETS </p>
-                              </div>
+                                          <img id="littleShoppingBag"  src="../assets/Icon_shopping.png"> </img>
+                                          <p id="littleShoppingBagText"> MIET- ODER KAUFOPTION DER SATELLITENBAU-SETS </p>
+                                    </div>
                                     <div class="flexbox-item-2">
                                           <video id="video"
                                                 
@@ -39,12 +35,32 @@
                                     </div>
                               </div>
                  
+                        <div 
+                              class="button flexbox-item-3"
+                               v-show="!isHovered2"
+                                    @mouseover="hoverButton2" >
 
+                                    <img src="../assets/Icon_presentation.png"></img> <br>
+                                    SCIENCETAINMENT-VORTRÄGE
+                        </div>
 
-                        <div class="button button-3">
-                                <img
-                                        src="../assets/Icon_presentation.png"></img><br>
-                                SCIENCETAINMENT-VORTRÄGE
+                        <div class="button button-4"
+                                    v-show="isHovered2"
+                                    @mouseleave="hoverButton2"
+                                    >
+                                    <!-- <div  class="littleHeader">
+                                          <img id="littleShoppingBag"  src="../assets/Icon_shopping.png"> </img>
+                                          <p id="littleShoppingBagText"> MIET- ODER KAUFOPTION DER SATELLITENBAU-SETS </p>
+                                    </div> -->
+                                    <div class="flexbox-item-4">
+                                          <div id="carousel">
+                                                <img class="animation" id="item-1" src="../assets/Photocarousel/Rockets.jpg">
+                                                <img class="animation" id="item-2" src="../assets/Photocarousel/RocketOutside1.jpg">
+                                                
+                                          </div>
+
+                                          <p id="carouselText">Für eine vertiefte und unterhaltsame Erfahrung bieten wir die Möglichkeit Sciencetainment-Vorträge zu buchen. Unsere Expertinnen und Experten gewähren spannende Einblicke in die Welt der Raumfahrt und Satelliten, indem sie lebendige Vortragseinheiten, interaktive Experimente und Diskussionen durchführen. </p>
+                                    </div>
                         </div>
                 </div>
         </div>
@@ -58,19 +74,21 @@ export default {
         },
         data() {
                 return {
-                        isHovered: false,
+                        isHovered1: false,
+                        isHovered2: false,
+                        
                 };
         },
         methods: {
-                hoverButton() {
-                        this.isHovered = true;
-                        console.log("hover");
-
+                hoverButton1() {
+                        this.isHovered1 = !this.isHovered1;
+                        console.log("test");
                 },
-                leaveButton() {
-                        this.isHovered = false;
-                        console.log("leave");
+                hoverButton2() {
+                        this.isHovered2 = !this.isHovered2;
+                        console.log("test2");
                 },
+                
                 
         },
 };
@@ -108,12 +126,18 @@ h1{
       
 }
 
+.button-4 {
+      background-color: #96b9d3;
+      width: 90%;
+}
+
 .flexbox {
         display: flex;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         gap: 50px;
+        margin-top: 3%;
 }
 
 .flexbox-item-1 {
@@ -136,10 +160,30 @@ h1{
         gap: 3%;
       
         margin: 0% 5% 5% 5%
+}
 
-      /* padding: 5%; */
+.flexbox-item-3 {
+      display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: #96b9d3;
 
+        width: 70%;
+        padding: 9.5% 0px;
+        /* aspect-ratio: 1.78/1; */
+
+}
+
+
+.flexbox-item-4 {
+      display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        gap: 3%;
       
+        margin: 0% 5% 5% 5%
 }
 
 .littleHeader {
@@ -184,5 +228,26 @@ video {
 img {
         width: 10%;
         margin: 2%
+}
+
+/* ANIMATION */
+
+.carousel {
+        position: relative;
+        /* overflow: hidden; */
+}
+
+.animation {
+        animation: runText 6s linear infinite;
+        position: absolute;
+        left: 100%;
+}
+
+#item-1 {
+        animation-delay: 0s;
+}
+
+#item-2 {
+        animation-delay: 3.5s;
 }
 </style>

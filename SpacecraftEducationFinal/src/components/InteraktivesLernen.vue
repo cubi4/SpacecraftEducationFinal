@@ -56,12 +56,12 @@ h1 {
 }
 
 .wrapper {
-      border: 1px solid rgb(62, 255, 23);
+      /* border: 1px solid rgb(62, 255, 23); */
       max-width: var(--max-width-page);
       width: 100%;
 }
 .outer-flexbox {
-      border: 1px solid rgb(255, 0, 0);
+      /* border: 1px solid rgb(255, 0, 0); */
 
       display: flex;
       justify-content: center;
@@ -72,7 +72,7 @@ h1 {
 }
 
 .inner-flexbox-left {
-      border: 1px solid rgb(255, 255, 255);
+      /* border: 1px solid rgb(255, 255, 255); */
       display: flex;
       flex-direction: column;
       justify-content: center;
