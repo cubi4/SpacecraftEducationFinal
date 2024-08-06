@@ -7,7 +7,7 @@
                                     v-show="!isHovered1"
                                     @mouseover="hoverButton1"
                                     >
-                                    <img
+                                    <img class="icons"
                                                       src="../assets/Icon_shopping.png"></img><br>
                                           MIET- ODER KAUFOPTION
                                           DER<br>
@@ -20,7 +20,7 @@
                                     @mouseleave="hoverButton1"
                                     >
                                     <div  class="littleHeader">
-                                          <img id="littleShoppingBag"  src="../assets/Icon_shopping.png"> </img>
+                                          <img id="littleShoppingBag" class="icons" src="../assets/Icon_shopping.png"> </img>
                                           <p id="littleShoppingBagText"> MIET- ODER KAUFOPTION DER SATELLITENBAU-SETS </p>
                                     </div>
                                     <div class="flexbox-item-2">
@@ -40,24 +40,31 @@
                                v-show="!isHovered2"
                                     @mouseover="hoverButton2" >
 
-                                    <img src="../assets/Icon_presentation.png"></img> <br>
+                                    <img class="icons" src="../assets/Icon_presentation.png"></img> <br>
                                     SCIENCETAINMENT-VORTRÄGE
                         </div>
 
                         <div class="button button-4"
                                     v-show="isHovered2"
-                                    @mouseleave="hoverButton2"
+                                    
                                     >
                                     <!-- <div  class="littleHeader">
                                           <img id="littleShoppingBag"  src="../assets/Icon_shopping.png"> </img>
                                           <p id="littleShoppingBagText"> MIET- ODER KAUFOPTION DER SATELLITENBAU-SETS </p>
                                     </div> -->
                                     <div class="flexbox-item-4">
-                                          <div id="carousel">
-                                                <img class="animation" id="item-1" src="../assets/Photocarousel/Rockets.jpg">
-                                                <img class="animation" id="item-2" src="../assets/Photocarousel/RocketOutside1.jpg">
+                                          <Carousel id="carousel" :autoplay="2000"   >
+                                                <Slide v-for="slide in 10" :key="slide">
+                                                      <div class="carousel-item">
+                                                            <img class="imagesInCarousel" id="image-1" src="../assets/Photocarousel/Rockets.jpg"> 
+                                                            <img class="imagesInCarousel"  id="image-2" src="../assets/Photocarousel/RocketOutside1.jpg">
+                                                      </div>
+                                                </Slide>
                                                 
-                                          </div>
+                                                <template #addons>
+                                                      <Pagination />
+                                                </template>
+                                          </Carousel>
 
                                           <p id="carouselText">Für eine vertiefte und unterhaltsame Erfahrung bieten wir die Möglichkeit Sciencetainment-Vorträge zu buchen. Unsere Expertinnen und Experten gewähren spannende Einblicke in die Welt der Raumfahrt und Satelliten, indem sie lebendige Vortragseinheiten, interaktive Experimente und Diskussionen durchführen. </p>
                                     </div>
@@ -67,10 +74,16 @@
 </template>
 
 <script>
+import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
 
 export default {
         name: 'Angebot',
         components: {
+            Carousel,
+    Slide,
+    Pagination,
+    Navigation,
         },
         data() {
                 return {
@@ -103,10 +116,11 @@ export default {
 h1{
       font-size: var(--font-size-head);
       margin: 30px 0px 0px 5%;
-      
-
 }
-
+.icons {
+        width: 10%;
+        margin: 2%
+}
 .button {
         border-radius: 20px;
         color: white;
@@ -182,8 +196,8 @@ h1{
         flex-direction: row;
         align-items: center;
         gap: 3%;
-      
-        margin: 0% 5% 5% 5%
+        /* margin: 0% 5% 5% 5% */
+        border: 1px solid rgb(136, 255, 0);
 }
 
 .littleHeader {
@@ -225,29 +239,41 @@ video {
         border-radius: 20px;
 }
 
-img {
-        width: 10%;
-        margin: 2%
+
+
+/* ------------------------ Photocarousel ------------------------  */
+#carousel{
+      position: relative;
+      border: 1px solid red;
+      width: 50%;
 }
 
-/* ANIMATION */
-
-.carousel {
-        position: relative;
-        /* overflow: hidden; */
+.carousel-item {
+  /* min-height: 200px; */
+  width: 30%;
+  background-color: var(--background-color-primary);
+  color: white;
+  font-size: 20px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.animation {
-        animation: runText 6s linear infinite;
-        position: absolute;
-        left: 100%;
+
+.carousel__prev,
+.carousel__next {
+  box-sizing: content-box;
 }
 
-#item-1 {
-        animation-delay: 0s;
+.imagesInCarousel {
+      max-height: 500px;;
+      max-width: 200px;
+
 }
 
-#item-2 {
-        animation-delay: 3.5s;
+#image-2{
+
 }
+
 </style>
